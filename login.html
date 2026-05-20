@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selestia — Create Avatar</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=loginfix3" />
+  <link rel="stylesheet" href="theme.css?v=siteqa2" />
+</head>
+<body class="login-page">
+  <div class="bg-grid"></div>
+  <div class="login-topbar">
+    <a class="login-logo" href="index.html#spaces">SELE<span>STIA</span></a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+  </div>
+  <main class="login-shell">
+    <section class="avatar-flow-section">
+      <div class="avatar-panel">
+        <div class="avatar-logo-mark">✦</div>
+        <h2>Enter Selestia</h2>
+        <p class="avatar-subtitle">Forge your digital identity to begin.</p>
+
+        <form class="avatar-form" id="profileForm" novalidate>
+          <div class="avatar-field" id="usernameField">
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="cosmic_traveler" autocomplete="off" />
+            <p class="avatar-error" id="usernameError"></p>
+          </div>
+
+          <div class="avatar-field" id="bioField">
+            <div class="avatar-row">
+              <label for="bio">Bio</label>
+              <span><span id="bioCount">0</span>/120</span>
+            </div>
+            <textarea id="bio" maxlength="120" rows="3" placeholder="Wandering through galaxies..."></textarea>
+            <p class="avatar-error" id="bioError"></p>
+          </div>
+
+          <div class="avatar-field avatar-select" data-avatar-select>
+            <label>Pick your avatar</label>
+            <button class="avatar-trigger" id="avatarTrigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="avatar-icon" id="selectedAvatarIcon">🌌</span>
+              <span id="selectedAvatarLabel">Galaxy</span>
+              <span class="avatar-chevron">⌄</span>
+            </button>
+            <input id="avatar" type="hidden" value="🌌" />
+            <ul class="avatar-menu" id="avatarMenu" role="listbox">
+              <li role="option" data-value="👽" data-icon="👽" aria-selected="false">👽 Alien</li>
+              <li role="option" data-value="🤖" data-icon="🤖" aria-selected="false">🤖 Robot</li>
+              <li role="option" data-value="🦊" data-icon="🦊" aria-selected="false">🦊 Fox</li>
+              <li role="option" data-value="🐉" data-icon="🐉" aria-selected="false">🐉 Dragon</li>
+              <li role="option" data-value="🌌" data-icon="🌌" aria-selected="true">🌌 Galaxy</li>
+              <li role="option" data-value="🦄" data-icon="🦄" aria-selected="false">🦄 Unicorn</li>
+              <li role="option" data-value="👾" data-icon="👾" aria-selected="false">👾 Alien Bot</li>
+              <li role="option" data-value="🧙" data-icon="🧙" aria-selected="false">🧙 Wizard</li>
+              <li role="option" data-value="🦋" data-icon="🦋" aria-selected="false">🦋 Butterfly</li>
+              <li role="option" data-value="🪐" data-icon="🪐" aria-selected="false">🪐 Planet</li>
+              <li role="option" data-value="🔮" data-icon="🔮" aria-selected="false">🔮 Crystal</li>
+              <li role="option" data-value="⚡" data-icon="⚡" aria-selected="false">⚡ Lightning</li>
+            </ul>
+            <p class="avatar-status" id="avatarStatus">Galaxy avatar chosen.</p>
+            <p class="avatar-error" id="avatarError"></p>
+          </div>
+
+          <fieldset class="avatar-field avatar-choice-field">
+            <legend>Aura color</legend>
+            <div class="avatar-colors">
+              <label><input type="radio" name="aura" value="#bf00ff" checked /><span style="--swatch:#bf00ff"></span></label>
+              <label><input type="radio" name="aura" value="#00f5ff" /><span style="--swatch:#00f5ff"></span></label>
+              <label><input type="radio" name="aura" value="#9b7cff" /><span style="--swatch:#9b7cff"></span></label>
+              <label><input type="radio" name="aura" value="#ff5fb3" /><span style="--swatch:#ff5fb3"></span></label>
+              <label><input type="radio" name="aura" value="#37dba0" /><span style="--swatch:#37dba0"></span></label>
+              <label><input type="radio" name="aura" value="#fbbf24" /><span style="--swatch:#fbbf24"></span></label>
+            </div>
+            <p class="avatar-error" id="colorError"></p>
+          </fieldset>
+
+          <fieldset class="avatar-field avatar-choice-field">
+            <legend>Choose your starting world</legend>
+            <div class="avatar-worlds">
+              <label><input type="radio" name="world" value="gaming" checked /><span><strong>🎮</strong>Gaming</span></label>
+              <label><input type="radio" name="world" value="study" /><span><strong>📚</strong>Study</span></label>
+              <label><input type="radio" name="world" value="music" /><span><strong>🎧</strong>Music</span></label>
+              <label><input type="radio" name="world" value="art" /><span><strong>🎨</strong>Art</span></label>
+              <label><input type="radio" name="world" value="tech" /><span><strong>🛰️</strong>Tech</span></label>
+            </div>
+            <p class="avatar-error" id="worldError"></p>
+          </fieldset>
+
+          <button class="avatar-submit btn-primary" type="submit">Enter Gaming Space →</button>
+          <a class="btn-outline avatar-home-link" href="index.html#spaces">Home</a>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="login.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

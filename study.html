@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selestia — Study Space</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="study.css?v=quotegrid1" />
+  <link rel="stylesheet" href="theme.css?v=siteqa2" />
+</head>
+<body>
+  <div class="bg-grid"></div><div class="orb orb-one"></div><div class="orb orb-two"></div>
+  <nav class="study-nav space-nav">
+    <a href="index.html#spaces" class="logo">SELE<span>STIA</span></a>
+    <div class="nav-links">
+        <a href="index.html#spaces">Home</a>
+        <a href="gaming.html">Gaming</a>
+        <a href="study.html">Study</a>
+        <a href="music.html">Music</a>
+        <a href="art.html">Art</a>
+        <a href="tech.html">Tech</a>
+    </div>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+  </nav>
+  <main class="study-shell">
+    <section class="study-hero"><div><div class="status-pill"><span></span> Study Hub Online</div><h1>Study Space</h1><p>Invite friends, start focus sessions, take breaks, and keep your study group in sync.</p></div><aside class="session-card"><span>Today</span><strong id="todayMinutes">0m</strong><p>focused together</p></aside></section>
+    <section class="study-layout">
+      <article class="panel video-panel"><div class="panel-head"><div><span class="eyebrow">Video chat</span><h2>Invite friends to join</h2></div><span class="live-badge">Room ready</span></div><div class="invite-form"><input id="friendInput" type="text" placeholder="Friend username" aria-label="Friend username" /><button id="inviteButton" type="button">Invite</button></div><p class="micro-copy" id="inviteStatus">Type a friend name and send an invite. This is a front-end simulation.</p><div class="video-grid" id="videoGrid"><div class="video-tile host"><div class="avatar">🧑‍🚀</div><strong>You</strong><span>Host • Camera preview</span></div><div class="video-tile waiting"><div class="avatar ghost">＋</div><strong>Open seat</strong><span>Waiting for invite</span></div></div></article>
+      <article class="panel timer-panel"><div class="panel-head"><div><span class="eyebrow">Focus timer</span><h2 id="phaseLabel">Focus Session</h2></div><span class="live-badge" id="timerState">Idle</span></div><div class="timer-display" id="timerDisplay">25:00</div><div class="timer-progress"><span id="timerProgress"></span></div><div class="timer-controls"><label>Topic<input id="topicInput" type="text" placeholder="Physics notes" /></label><label>Focus<input id="focusInput" type="number" min="1" max="180" value="25" /></label><label>Break<input id="breakInput" type="number" min="1" max="60" value="5" /></label></div><div class="button-row"><button id="startButton" type="button">Start</button><button id="pauseButton" type="button">Pause</button><button id="resetButton" type="button">Reset</button></div></article>
+      <article class="panel goals-panel"><div class="panel-head"><div><span class="eyebrow">Session goals</span><h2>Study checklist</h2></div><span class="live-badge" id="goalCount">0 done</span></div><div class="goal-form"><input id="goalInput" type="text" placeholder="Add a goal for this session" aria-label="Study goal" /><button id="goalButton" type="button">Add</button></div><ul class="goal-list" id="goalList"><li><label><input type="checkbox" /> Review lecture notes</label></li><li><label><input type="checkbox" /> Solve 10 practice questions</label></li></ul></article>
+      <article class="panel quote-panel"><div class="panel-head"><div><span class="eyebrow">Daily boost</span><h2>Quote Generator</h2></div><span class="live-badge" id="quoteStatus">Ready</span></div><div class="quote-box"><span class="quote-mark">“</span><p id="dailyQuoteText">Click generate to pull a study quote from DummyJSON.</p><strong id="dailyQuoteAuthor">Selestia</strong></div><button id="refreshQuote" type="button">Generate Quote</button></article>
+      <article class="panel chat-panel"><div class="panel-head"><div><span class="eyebrow">Group chat</span><h2>Room messages</h2></div><span class="live-badge">Synced</span></div><div class="chat-feed" id="chatFeed"><div class="message system">Welcome to Study Space. Invite friends and start your focus timer.</div></div><div class="chat-compose"><input id="messageInput" type="text" placeholder="Type a message..." /><button id="sendButton" type="button">Send</button></div></article>
+    </section>
+  </main>
+  <script src="space-guard.js?v=spaceguard1"></script>
+  <script src="study.js?v=randomquote1"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

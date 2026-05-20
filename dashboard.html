@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selestia — Personal Dashboard</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="theme.css?v=siteqa2" />
+</head>
+<body><div class="bg-grid"></div><div class="orb orb-one"></div><div class="orb orb-two"></div>  <nav class="dash-nav xp-nav">
+    <a href="index.html" class="logo">SELE<span>STIA</span></a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#spaces">Home</a>
+      <a href="xp.html">XP Page</a>
+      <a href="community.html">Community</a>
+    </div>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+  </nav>
+<main class="dashboard-shell"><section class="dash-hero"><div><div class="status-pill"><span></span> Personal dashboard online</div><h1>Your Dashboard</h1><p>Track XP, level progress, space activity, focus time, posts, playlists, and gaming wins.</p></div><aside class="level-card"><span>Current level</span><strong id="levelText">1</strong><p id="levelTitle">New Explorer</p></aside></section><section class="auth-notice" id="dashboardAuthNotice" hidden><div><span>Profile required</span><h2>Log in to see your progress</h2><p>Create or switch into a Selestia profile to track your XP.</p></div><a href="login.html">Login</a></section><section class="dashboard-grid"><article class="panel xp-panel"><div class="panel-head"><div><span class="eyebrow">XP system</span><h2>Progress</h2></div><button id="refreshDashboard" type="button">Refresh</button></div><div class="xp-readout"><strong id="totalXpText">0 XP</strong><span id="nextLevelText">100 XP to next level</span></div><div class="xp-track"><span id="xpFill"></span></div><div class="xp-breakdown" id="xpBreakdown"></div></article><article class="panel avatar-panel"><span class="eyebrow">Identity</span><div class="avatar-orb" id="avatarOrb">✦</div><h2 id="dashboardName">Selestia Member</h2><p id="dashboardBio">Build your avatar from the login page to personalize this card.</p></article><article class="stat-card"><span>Gaming wins</span><strong id="gamingWins">0</strong><p>from Gaming Zone</p></article><article class="stat-card"><span>Focus time</span><strong id="focusTime">0m</strong><p>from Study Space</p></article><article class="stat-card"><span>Community posts</span><strong id="communityPosts">0</strong><p>from Community Feed</p></article><article class="stat-card"><span>Music saves</span><strong id="musicSaves">0</strong><p>queue + playlists</p></article><article class="panel spaces-panel"><div class="panel-head"><div><span class="eyebrow">Spaces</span><h2>Space activity</h2></div></div><div class="space-activity" id="spaceActivity"></div></article><article class="panel activity-panel"><div class="panel-head"><div><span class="eyebrow">Recent</span><h2>Activity summary</h2></div></div><div class="activity-list" id="activityList"></div></article></section></main>
+  <script src="dashboard.js?v=live1"></script>
+  <script src="theme.js"></script>
+</body></html>

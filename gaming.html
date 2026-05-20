@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selestia — Gaming Zone</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Rajdhani:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gaming.css?v=navfix1" />
+    <link rel="stylesheet" href="theme.css?v=siteqa2" />
+  </head>
+  <body>
+    <nav class="gaming-nav space-nav">
+      <a class="logo" href="index.html#spaces">SELE<span>STIA</span></a>
+      <div class="nav-links">
+        <a href="index.html#spaces">Home</a>
+        <a href="gaming.html">Gaming</a>
+        <a href="study.html">Study</a>
+        <a href="music.html">Music</a>
+        <a href="art.html">Art</a>
+        <a href="tech.html">Tech</a>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+    </nav>
+    <main class="arcade-shell">
+      <section class="gaming-zone" id="games" aria-labelledby="gaming-title">
+        <div class="zone-header">
+          <div>
+            <p class="status-pill"><span></span> Now live - Selestia arcade arena</p>
+            <h1 id="gaming-title">Gaming <span>Zone</span></h1>
+          </div>
+          <div class="player-card">
+            <div class="avatar-core" aria-hidden="true">🎮</div>
+            <div>
+              <p class="player-name">Arcade Console</p>
+              <p class="player-rank">Track wins and XP locally</p>
+            </div>
+            <div class="player-stats" aria-label="Arcade stats">
+              <span><strong>10</strong> Modes</span>
+              <span><strong id="winsText">0</strong> Wins</span>
+            </div>
+            <div class="xp-meter" aria-label="Arcade XP">
+              <span id="xpText">XP 0 / 100</span>
+              <div class="xp-track">
+                <span id="xpFill"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-tabs" role="tablist" aria-label="Choose a game">
+          <button class="game-tab is-active" type="button" data-game="ticTacToe">Tic Tac Toe</button>
+          <button class="game-tab" type="button" data-game="ludo">Ludo</button>
+          <button class="game-tab" type="button" data-game="snakeLadder">Snake & Ladder</button>
+          <button class="game-tab" type="button" data-game="snake">Snake</button>
+          <button class="game-tab" type="button" data-game="bubble">Bubble Shoot</button>
+          <button class="game-tab" type="button" data-game="memory">Memory Match</button>
+          <button class="game-tab" type="button" data-game="reaction">Reaction Dash</button>
+          <button class="game-tab" type="button" data-game="rps">RPS Battle</button>
+          <button class="game-tab" type="button" data-game="guess">Number Guess</button>
+          <button class="game-tab" type="button" data-game="word">Word Scramble</button>
+        </div>
+
+        <div class="game-panels">
+          <article class="game-panel is-active" data-panel="ticTacToe">
+            <div class="panel-topline">
+              <h2>Tic Tac Toe vs Computer</h2>
+              <button class="mini-button" type="button" id="resetTicTacToe">Reset</button>
+            </div>
+            <p class="game-status" id="ticTacToeStatus">You are X. Computer is O.</p>
+            <div class="tic-board" id="ticTacToeBoard" aria-label="Tic tac toe board"></div>
+          </article>
+
+          <article class="game-panel" data-panel="ludo">
+            <div class="panel-topline">
+              <h2>Mini Ludo vs Computer</h2>
+              <button class="mini-button" type="button" id="resetLudo">Reset</button>
+            </div>
+            <p class="game-status" id="ludoStatus">You roll first. First racer to 30 wins.</p>
+            <div class="race-track" id="ludoTrack"></div>
+            <div class="game-actions">
+              <button class="mini-button primary" type="button" id="rollLudo">Roll Dice</button>
+              <span class="dice-readout" id="ludoDice">-</span>
+            </div>
+          </article>
+
+          <article class="game-panel" data-panel="snakeLadder">
+            <div class="panel-topline">
+              <h2>Snake & Ladder vs Computer</h2>
+              <button class="mini-button" type="button" id="resetSnakeLadder">Reset</button>
+            </div>
+            <p class="game-status" id="snakeLadderStatus">Reach tile 36 before the computer.</p>
+            <div class="ladder-board" id="snakeLadderBoard"></div>
+            <div class="game-actions">
+              <button class="mini-button primary" type="button" id="rollSnakeLadder">Roll Dice</button>
+              <span class="dice-readout" id="snakeLadderDice">-</span>
+            </div>
+          </article>
+
+          <article class="game-panel" data-panel="snake">
+            <div class="panel-topline">
+              <h2>Snake</h2>
+              <button class="mini-button" type="button" id="startSnake">Start</button>
+            </div>
+            <p class="game-status" id="snakeStatus">Use arrow keys or WASD. Eat stars to grow.</p>
+            <canvas class="snake-canvas" id="snakeCanvas" width="360" height="360"></canvas>
+          </article>
+
+          <article class="game-panel" data-panel="bubble">
+            <div class="panel-topline">
+              <h2>Bubble Shoot</h2>
+              <button class="mini-button" type="button" id="resetBubble">Reset</button>
+            </div>
+            <p class="game-status" id="bubbleStatus">Click a matching color group of 2 or more to pop it.</p>
+            <div class="bubble-grid" id="bubbleGrid"></div>
+          </article>
+
+          <article class="game-panel" data-panel="memory">
+            <div class="panel-topline">
+              <h2>Memory Match</h2>
+              <button class="mini-button" type="button" id="resetMemory">Shuffle</button>
+            </div>
+            <p class="game-status" id="memoryStatus">Find all matching pairs.</p>
+            <div class="memory-grid" id="memoryGrid"></div>
+          </article>
+
+          <article class="game-panel" data-panel="reaction">
+            <div class="panel-topline">
+              <h2>Reaction Dash</h2>
+              <button class="mini-button" type="button" id="startReaction">Start</button>
+            </div>
+            <p class="game-status" id="reactionStatus">Wait for the target to glow, then tap it fast.</p>
+            <button class="reaction-target" type="button" id="reactionTarget">Ready</button>
+          </article>
+
+          <article class="game-panel" data-panel="rps">
+            <div class="panel-topline">
+              <h2>Rock Paper Scissors</h2>
+              <button class="mini-button" type="button" id="resetRps">Reset</button>
+            </div>
+            <p class="game-status" id="rpsStatus">First to 5 rounds wins XP.</p>
+            <div class="score-row">
+              <span>You: <strong id="rpsPlayerScore">0</strong></span>
+              <span>Computer: <strong id="rpsComputerScore">0</strong></span>
+            </div>
+            <div class="choice-row">
+              <button class="choice-button" type="button" data-rps="rock">Rock</button>
+              <button class="choice-button" type="button" data-rps="paper">Paper</button>
+              <button class="choice-button" type="button" data-rps="scissors">Scissors</button>
+            </div>
+          </article>
+
+          <article class="game-panel" data-panel="guess">
+            <div class="panel-topline">
+              <h2>Number Guess</h2>
+              <button class="mini-button" type="button" id="resetGuess">New Number</button>
+            </div>
+            <p class="game-status" id="guessStatus">Guess the computer's number from 1 to 50.</p>
+            <div class="guess-row">
+              <input id="guessInput" type="number" min="1" max="50" placeholder="1 - 50" />
+              <button class="mini-button primary" type="button" id="submitGuess">Guess</button>
+            </div>
+          </article>
+
+          <article class="game-panel" data-panel="word">
+            <div class="panel-topline">
+              <h2>Word Scramble</h2>
+              <button class="mini-button" type="button" id="resetWord">New Word</button>
+            </div>
+            <p class="game-status" id="wordStatus">Unscramble the Selestia word before the computer locks it.</p>
+            <p class="scramble-word" id="scrambleWord">ORBIT</p>
+            <div class="guess-row">
+              <input id="wordInput" type="text" placeholder="Your answer" />
+              <button class="mini-button primary" type="button" id="submitWord">Submit</button>
+            </div>
+          </article>
+        </div>
+
+        <section class="arcade-chat" aria-labelledby="gamingChatTitle">
+          <div class="panel-topline">
+            <div>
+              <p class="eyebrow">Squad chat</p>
+              <h2 id="gamingChatTitle">Gaming Room Chat</h2>
+            </div>
+            <button class="mini-button" type="button" id="clearGamingChat">Clear Chat</button>
+          </div>
+          <div class="chat-feed" id="gamingChatFeed" aria-live="polite">
+            <div class="chat-message system-message">Welcome to Gaming Zone. Share scores, challenge friends, or drop quick strategy notes.</div>
+          </div>
+          <div class="chat-compose">
+            <input id="gamingChatName" type="text" placeholder="Player name" aria-label="Player name" />
+            <input id="gamingChatInput" type="text" placeholder="Send a message to the arcade..." aria-label="Gaming chat message" />
+            <button class="mini-button primary" type="button" id="sendGamingChat">Send</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="space-guard.js?v=spaceguard1"></script>
+    <script src="gaming.js"></script>
+    <script src="theme.js"></script>
+  </body>
+</html>

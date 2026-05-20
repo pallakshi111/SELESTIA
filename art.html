@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selestia — Art Gallery</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="art.css?v=artcolors1" />
+  <link rel="stylesheet" href="theme.css?v=siteqa2" />
+</head>
+<body>
+  <nav class="art-nav space-nav">
+    <a class="logo" href="index.html#spaces">SELE<span>STIA</span></a>
+    <div class="nav-links">
+        <a href="index.html#spaces">Home</a>
+        <a href="gaming.html">Gaming</a>
+        <a href="study.html">Study</a>
+        <a href="music.html">Music</a>
+        <a href="art.html">Art</a>
+        <a href="tech.html">Tech</a>
+    </div>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+  </nav>
+  <main class="art-shell">
+    <section class="art-gallery" aria-labelledby="art-title">
+      <div class="gallery-header">
+        <div>
+          <p class="status-pill"><span></span> Paint by number studio</p>
+          <h1 id="art-title">Art <span>Gallery</span></h1>
+          <p class="intro">Choose a canvas, match each number to its color, or open the sketch pad to draw freely.</p>
+        </div>
+        <aside class="progress-card">
+          <p class="card-label">Canvas progress</p>
+          <strong id="progressText">0%</strong>
+          <div class="progress-track"><span id="progressFill"></span></div>
+          <div class="art-xp-readout"><span>Art XP</span><b id="artXpText">0 XP</b><small id="artLevelText">Level 1 creator</small></div>
+        </aside>
+      </div>
+      <section class="studio-layout">
+        <aside class="tool-panel">
+          <div class="tool-group">
+            <h2>Difficulty</h2>
+            <div class="segmented-control">
+              <button class="level-button is-active" type="button" data-level="easy">Easy</button>
+              <button class="level-button" type="button" data-level="medium">Medium</button>
+              <button class="level-button" type="button" data-level="tough">Tough</button>
+            </div>
+          </div>
+          <div class="tool-group">
+            <h2>Canvas Library</h2>
+            <div class="canvas-list" id="canvasList"></div>
+          </div>
+          <div class="tool-group">
+            <h2>Palette</h2>
+            <div class="palette" id="palette"></div>
+          </div>
+          <div class="tool-actions">
+            <button class="action-button" id="hintButton" type="button">Hint</button>
+            <button class="action-button" id="checkButton" type="button">Check</button>
+            <button class="action-button primary" id="resetButton" type="button">Reset</button>
+          </div>
+        </aside>
+        <section class="canvas-area">
+          <div class="canvas-topline">
+            <div><span class="eyebrow" id="levelLabel">Easy level</span><h2 id="canvasTitle">Canvas</h2></div>
+            <p class="message" id="message">Pick a color and start painting.</p>
+          </div>
+          <div class="paint-board-wrap"><div class="paint-board" id="paintBoard"></div></div>
+          <div class="legend" id="legend"></div>
+          <section class="free-canvas-panel">
+            <div class="canvas-topline"><div><span class="eyebrow">Free canvas</span><h2>Sketch Pad</h2></div><p class="message" id="drawMessage">Draw anything and save it for Art XP.</p></div>
+            <div class="draw-toolbar">
+              <label>Color<input id="brushColor" type="color" value="#8f5cff" /></label>
+              <label>Brush<input id="brushSize" type="range" min="2" max="32" value="8" /></label>
+              <button class="action-button" id="clearCanvas" type="button">Clear</button>
+              <button class="action-button primary" id="saveCanvas" type="button">Save</button>
+            </div>
+            <canvas id="freeCanvas" width="900" height="520"></canvas>
+          </section>
+          <section class="completed-panel">
+            <p class="card-label">Finished artworks</p>
+            <h2 id="completedTitle">Completed Gallery</h2>
+            <div class="completed-list" id="completedList"></div>
+          </section>
+        </section>
+      </section>
+    </section>
+  </main>
+  <script src="space-guard.js?v=spaceguard1"></script>
+  <script src="art.js?v=artcolors1"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

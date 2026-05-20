@@ -1,0 +1,161 @@
+:root {
+  --cyan: #00f5ff;
+  --purple: #bf00ff;
+  --pink: #ff00aa;
+  --green: #00ff88;
+  --bg: #030712;
+  --panel: rgba(6, 12, 27, 0.82);
+  --line: rgba(0, 245, 255, 0.2);
+  --text: #e2e8f0;
+  --muted: #718096;
+  --display: 'Orbitron', monospace;
+  --body: 'Rajdhani', sans-serif;
+}
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; color: var(--text); font-family: var(--body); background: radial-gradient(circle at 16% 14%, rgba(255,0,170,.2), transparent 26rem), radial-gradient(circle at 86% 76%, rgba(0,245,255,.18), transparent 30rem), linear-gradient(135deg, #030712, #071020 55%, #001824); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+button, input { font-family: var(--body); }
+.bg-grid { position: fixed; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(0,245,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,255,.045) 1px, transparent 1px); background-size: 64px 64px; opacity: .8; }
+.orb { position: fixed; border-radius: 50%; filter: blur(84px); opacity: .14; pointer-events: none; }
+.orb-one { width: 420px; height: 420px; background: var(--pink); top: -100px; left: -80px; }
+.orb-two { width: 390px; height: 390px; background: var(--cyan); right: -100px; bottom: -100px; }
+.music-nav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 18px clamp(22px, 5vw, 54px); border-bottom: 1px solid rgba(0,245,255,.12); background: rgba(3,7,18,.84); backdrop-filter: blur(20px); }
+.logo { color: var(--cyan); font-family: var(--display); font-weight: 900; letter-spacing: 4px; text-shadow: 0 0 22px var(--cyan); }
+.logo span { color: var(--purple); text-shadow: 0 0 18px var(--purple); }
+.nav-links { display: flex; gap: 16px; color: #94a3b8; font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+.nav-links a:hover { color: var(--cyan); }
+.music-shell { position: relative; z-index: 1; width: min(1280px, 100%); margin: 0 auto; padding: 42px clamp(18px, 4vw, 48px) 90px; }
+.music-hero { display: block; margin-bottom: 24px; padding: clamp(22px, 4vw, 38px); border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(145deg, rgba(0,245,255,.055), rgba(191,0,255,.04)), var(--panel); box-shadow: 0 22px 54px rgba(0,0,0,.3), inset 0 0 0 1px rgba(255,255,255,.025); }
+.status-pill, .eyebrow, .live-badge { color: var(--cyan); font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+.status-pill { display: inline-flex; gap: 9px; align-items: center; padding: 7px 16px; border: 1px solid rgba(0,245,255,.25); border-radius: 999px; background: rgba(0,245,255,.07); }
+.status-pill span { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px var(--cyan); }
+h1 { margin: 24px 0 18px; font-family: var(--display); font-size: clamp(52px, 7.2vw, 92px); line-height: .95; text-transform: uppercase; background: linear-gradient(100deg, #fff, var(--cyan) 45%, var(--purple) 74%, var(--pink)); background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 32px rgba(0,245,255,.28); }
+.music-hero p { max-width: 760px; margin: 0; color: var(--muted); font-size: 21px; line-height: 1.7; }
+.now-card, .panel { border: 1px solid var(--line); border-radius: 16px; background: linear-gradient(145deg, rgba(0,245,255,.055), rgba(191,0,255,.04)), var(--panel); box-shadow: 0 22px 54px rgba(0,0,0,.3), inset 0 0 0 1px rgba(255,255,255,.025); }
+.now-card { width: min(100%, 760px); margin-top: 8px; padding: 20px 22px; }
+.now-card span { color: var(--muted); text-transform: uppercase; letter-spacing: 2px; }
+.now-card strong { display: block; margin: 10px 0; color: var(--cyan); font-family: var(--display); font-size: 24px; }
+.now-card p { font-size: 15px; }
+.music-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px); gap: 18px; align-items: start; }
+.panel { padding: 22px; }
+.panel-head { display: flex; justify-content: space-between; gap: 16px; align-items: start; margin-bottom: 18px; }
+h2, h3 { margin: 0; font-family: var(--display); }
+h2 { margin-top: 4px; font-size: 21px; }
+#searchInput, .playlist-form input, .chat-compose input { min-width: 0; border: 1px solid rgba(0,245,255,.18); border-radius: 8px; color: var(--text); background: rgba(2,6,23,.72); padding: 13px 14px; outline: none; }
+#searchInput { width: min(100%, 340px); margin-bottom: 12px; }
+input:focus { border-color: var(--cyan); box-shadow: 0 0 0 4px rgba(0,245,255,.12); }
+button { border: 0; border-radius: 8px; color: #020617; background: linear-gradient(135deg, var(--cyan), var(--purple)); font-family: var(--display); font-size: 12px; font-weight: 800; letter-spacing: 1.4px; padding: 12px 16px; text-transform: uppercase; cursor: pointer; }
+.genre-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+.genre { color: var(--text); border: 1px solid rgba(0,245,255,.2); background: rgba(0,245,255,.06); }
+.genre.active { color: #020617; background: linear-gradient(135deg, var(--cyan), var(--purple)); }
+.songs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+.song-card { padding: 16px; border: 1px solid rgba(0,245,255,.16); border-radius: 12px; background: rgba(2,6,23,.56); transition: transform .18s, border-color .18s; }
+.song-card:hover { transform: translateY(-3px); border-color: rgba(0,245,255,.38); }
+.song-cover { display: grid; height: 112px; place-items: center; border-radius: 10px; background: radial-gradient(circle, rgba(0,245,255,.22), rgba(191,0,255,.12)); font-size: 44px; }
+.song-title { margin-top: 12px; font-weight: 800; font-size: 18px; }
+.song-artist, .song-genre { color: var(--muted); }
+.song-actions { display: flex; gap: 8px; margin-top: 12px; }
+.song-actions button { flex: 1; padding: 10px; }
+.player-panel { position: static; align-self: start; overflow: hidden; }
+.cover-orb { display: grid; width: 150px; height: 150px; margin: 10px auto 18px; place-items: center; border-radius: 50%; background: conic-gradient(from 90deg, var(--cyan), var(--purple), var(--pink), var(--cyan)); box-shadow: 0 0 44px rgba(0,245,255,.24); font-size: 52px; }
+.player-panel h3, .player-panel p { text-align: center; }
+.player-panel p { color: var(--muted); }
+.live-badge { padding: 6px 10px; border: 1px solid rgba(0,245,255,.24); border-radius: 999px; background: rgba(0,245,255,.06); }
+.progress-meta { display: flex; justify-content: space-between; gap: 10px; margin-top: 18px; color: var(--muted); font-weight: 700; }
+.timer-progress { height: 9px; margin-top: 8px; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.08); }
+.timer-progress span { display: block; width: 0%; height: 100%; background: linear-gradient(90deg, var(--cyan), var(--purple), var(--pink)); }
+.player-actions { display: flex; justify-content: center; gap: 10px; margin: 22px 0; }
+.player-actions button { min-width: 54px; min-height: 48px; }
+.main-play { transform: scale(1.12); }
+.volume-label { display: grid; gap: 8px; color: #94a3b8; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; }
+.playlist-panel { min-height: 230px; }
+.music-chat { min-height: 0; }
+.playlist-panel { margin-top: 22px; }
+.music-chat { margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(0,245,255,.14); }
+.playlist-form, .chat-compose { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+.chat-compose { grid-template-columns: 120px minmax(0, 1fr) auto; }
+.playlist-list, .queue-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.playlist-chip, .queue-chip { padding: 9px 12px; border: 1px solid rgba(0,245,255,.16); border-radius: 999px; color: var(--cyan); background: rgba(0,245,255,.06); }
+.chat-feed { height: 180px; overflow: auto; display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.message { max-width: 94%; padding: 10px 12px; border: 1px solid rgba(0,245,255,.14); border-radius: 10px; background: rgba(0,245,255,.055); color: #dbeafe; }
+.message strong { display: block; color: var(--cyan); margin-bottom: 3px; }
+.system { color: #a7f3d0; border-color: rgba(0,255,136,.16); background: rgba(0,255,136,.055); }
+@media (max-width: 520px) { .music-layout { grid-template-columns: 1fr; } .player-panel { position: static; } }
+@media (max-width: 640px) { .nav-links { display: none; } .panel-head, .playlist-form, .chat-compose { grid-template-columns: 1fr; flex-direction: column; } .chat-compose { display: flex; } h1 { font-size: clamp(42px, 16vw, 64px); } .music-shell { padding-inline: 16px; } }
+
+/* Keep the preview player in normal page flow so it cannot cover chat while scrolling. */
+.player-panel { position: static; }
+
+/* Final music layout guard: keep player beside the library except on tiny phones. */
+.music-shell .music-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px) !important;
+  align-items: start !important;
+}
+
+.music-shell .player-panel {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+.music-shell .library-panel {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+.music-shell .playlist-panel {
+  min-height: 220px;
+}
+
+.music-shell .playlist-panel .panel-head {
+  align-items: center;
+}
+
+.music-shell .playlist-panel .panel-head button,
+.music-shell .playlist-form button {
+  min-width: 112px;
+  min-height: 46px;
+  padding: 11px 18px;
+}
+
+.music-shell .playlist-form {
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) 112px;
+  margin-top: 12px;
+}
+
+.music-shell .playlist-form input {
+  height: 46px;
+}
+
+.music-shell #playlistList,
+.music-shell #queueList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.music-shell .playlist-chip,
+.music-shell .queue-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 7px 14px;
+}
+
+@media (max-width: 520px) {
+  .music-shell .music-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .music-shell .player-panel,
+  .music-shell .library-panel {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .music-shell .playlist-form {
+    grid-template-columns: 1fr;
+  }
+}

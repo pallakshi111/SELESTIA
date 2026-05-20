@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selestia — Tech Space</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tech.css?v=taskfix1" />
+  <link rel="stylesheet" href="theme.css?v=siteqa2" />
+</head>
+<body><div class="bg-grid"></div><div class="orb orb-one"></div><div class="orb orb-two"></div>
+  <nav class="tech-nav space-nav">
+    <a href="index.html#spaces" class="logo">SELE<span>STIA</span></a>
+    <div class="nav-links">
+        <a href="index.html#spaces">Home</a>
+        <a href="gaming.html">Gaming</a>
+        <a href="study.html">Study</a>
+        <a href="music.html">Music</a>
+        <a href="art.html">Art</a>
+        <a href="tech.html">Tech</a>
+    </div>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+  </nav>
+  <main class="tech-shell"><section class="tech-hero"><div><div class="status-pill"><span></span> Tech lab online</div><h1>Tech <span>Space</span></h1><p>Plan projects, track code tasks, save resources, run coding sprints, and chat with your builder room.</p></div><aside class="xp-card"><span>Tech XP</span><strong id="techXpText">0 XP</strong><p id="techLevelText">Level 1 builder</p><div class="xp-track"><span id="techXpFill"></span></div></aside></section><section class="stats-grid"><article class="stat-card"><span>Projects</span><strong id="projectCount">0</strong></article><article class="stat-card"><span>Tasks Done</span><strong id="doneCount">0</strong></article><article class="stat-card"><span>Resources</span><strong id="resourceCount">0</strong></article><article class="stat-card"><span>Sprint Time</span><strong id="sprintTime">0m</strong></article></section><section class="tech-layout"><article class="panel projects-panel"><div class="panel-head"><div><span class="eyebrow">Project rooms</span><h2>Project Board</h2></div><button id="clearProjects" type="button">Clear</button></div><form class="project-form" id="projectForm"><input id="projectTitle" type="text" placeholder="Project name" required /><input id="projectStack" type="text" placeholder="Stack: HTML CSS JS" required /><select id="projectStatus"><option>Idea</option><option>Building</option><option>Testing</option><option>Launched</option></select><button type="submit">Add</button></form><div class="project-grid" id="projectGrid"></div></article><article class="panel task-panel"><div class="panel-head"><div><span class="eyebrow">Task tracker</span><h2>Build Queue</h2></div><button id="clearTasks" type="button">Clear</button></div><form class="task-form" id="taskForm"><input id="taskTitle" type="text" placeholder="Add a coding task" required /><select id="taskStatus"><option value="todo">To do</option><option value="doing">Doing</option><option value="done">Done</option></select><button type="submit">Add</button></form><div class="kanban" id="kanbanBoard"><div class="kanban-column" data-column="todo"><h3>To Do</h3><div class="task-list"></div></div><div class="kanban-column" data-column="doing"><h3>Doing</h3><div class="task-list"></div></div><div class="kanban-column" data-column="done"><h3>Done</h3><div class="task-list"></div></div></div></article><article class="panel sprint-panel"><div class="panel-head"><div><span class="eyebrow">Focus sprint</span><h2>Coding Sprint</h2></div><span class="live-badge" id="sprintState">Idle</span></div><div class="timer-display" id="timerDisplay">25:00</div><div class="timer-progress"><span id="timerFill"></span></div><div class="sprint-controls"><label>Minutes<input id="sprintMinutes" type="number" min="1" max="120" value="25" /></label><button id="startSprint" type="button">Start</button><button id="pauseSprint" type="button">Pause</button><button id="resetSprint" type="button">Reset</button></div></article><article class="panel resources-panel"><div class="panel-head"><div><span class="eyebrow">Resource vault</span><h2>Saved Links</h2></div><button id="clearResources" type="button">Clear</button></div><form class="resource-form" id="resourceForm"><input id="resourceTitle" type="text" placeholder="Resource title" required /><input id="resourceUrl" type="url" placeholder="https://example.com" required /><button type="submit">Save</button></form><div class="resource-list" id="resourceList"></div></article><article class="panel notes-panel"><div class="panel-head"><div><span class="eyebrow">Code notes</span><h2>Snippets & Bugs</h2></div><button id="saveNote" type="button">Save</button></div><textarea id="codeNotes" rows="10" placeholder="Write bugs, snippets, commands, fixes, or ideas..."></textarea><p class="micro-copy" id="noteStatus">Notes autosave after you click Save.</p></article><article class="panel chat-panel"><div class="panel-head"><div><span class="eyebrow">Tech chat</span><h2>Builder Room</h2></div><button id="clearChat" type="button">Clear</button></div><div class="chat-feed" id="chatFeed"></div><form class="chat-form" id="chatForm"><input id="chatName" type="text" placeholder="Name" /><input id="chatInput" type="text" placeholder="Ask, debug, or share an update..." required /><button type="submit">Send</button></form></article></section></main>
+  <script src="space-guard.js?v=spaceguard1"></script>
+  <script src="tech.js?v=taskfix1"></script>
+  <script src="theme.js"></script>
+</body></html>

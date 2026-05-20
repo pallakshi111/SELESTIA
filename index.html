@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selestia — Your Digital Universe</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css?v=cursorglow1" />
+  <link rel="stylesheet" href="theme.css?v=siteqa2" />
+</head>
+<body>
+  <div class="site-content">
+
+  <div class="bg-grid"></div>
+  <div class="orb-blob orb-blob-1"></div>
+  <div class="orb-blob orb-blob-2"></div>
+  <div class="orb-blob orb-blob-3"></div>
+
+  <!-- NAVBAR -->
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <div class="nav-logo">SELE<span>STIA</span></div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#spaces">Spaces</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="xp.html">XP</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+        <a href="login.html" class="btn-outline nav-login-link" style="padding:10px 22px; font-size:11px;">Login</a>
+        <a href="login.html" class="btn-primary nav-login-link" style="padding:10px 22px; font-size:11px;">Join Free</a>
+        <button class="exit-user-btn" id="exitUserButton" type="button" hidden>Exit User</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero-section">
+    <div class="hero-left">
+      <div class="hero-badge fade-1">
+        <div class="badge-dot"></div>
+        Now Live — 12,000+ Members Online
+      </div>
+      <h1 class="hero-title fade-2">
+        <span style="color:#e2e8f0;">Your Digital</span>
+        <span class="text-cyan">Universe</span>
+        <span style="color:#e2e8f0;">Awaits.</span>
+      </h1>
+      <p class="hero-sub fade-3">
+        Step into Selestia — a next-gen virtual community platform where you build your identity, join digital spaces, and connect with Selestia.
+      </p>
+      <div class="hero-btns fade-4">
+        <a href="login.html" class="btn-primary">Enter Selestia</a>
+        <a href="#features"   class="btn-outline">Explore Features</a>
+      </div>
+      <div class="hero-stats fade-5">
+        <div><div class="stat-num">50K+</div><div class="stat-lbl">Active Users</div></div>
+        <div><div class="stat-num">200+</div><div class="stat-lbl">Virtual Spaces</div></div>
+        <div><div class="stat-num">99%</div><div class="stat-lbl">Satisfaction</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="section-wrap">
+      <div style="text-align:center;">
+        <div class="section-tag">Why Selestia?</div>
+        <h2 class="section-title">Built for the <span class="text-cyan">Future</span></h2>
+        <p class="section-sub" style="margin:0 auto;">Everything you need to live your digital life, in one powerful platform.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feat-card">
+          <div class="feat-icon" style="background:rgba(0,245,255,.1);">🧑‍🚀</div>
+          <h3>Custom Avatars</h3>
+          <p>Design your unique digital identity with custom avatars, bios, and visual styles that represent who you truly are.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:rgba(191,0,255,.1);">🌐</div>
+          <h3>Virtual Spaces</h3>
+          <p>Join themed communities — from gaming zones to study hubs. Each space has its own vibe and dedicated community.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:rgba(255,0,170,.1);">📡</div>
+          <h3>Live Community Feed</h3>
+          <p>Post updates, like and comment in real time. Stay connected with your community through a dynamic social feed.</p>
+        </div>
+        <a class="feat-card feature-link-card" href="dashboard.html">
+          <div class="feat-icon" style="background:rgba(0,245,255,.1);">📊</div>
+          <h3>Personal Dashboard</h3>
+          <p>Track your activity, stats, and progress in a beautifully designed personal control centre built just for you.</p>
+        </a>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:rgba(191,0,255,.1);">🔒</div>
+          <h3>Private & Secure</h3>
+          <p>Your data lives locally on your device. No external servers, no tracking. Your digital world, your rules.</p>
+        </div>
+        <a class="feat-card feature-link-card" href="xp.html">
+          <div class="feat-icon" style="background:rgba(0,255,136,.1);">⚡</div>
+          <h3>XP & Level System</h3>
+          <p>Earn XP for every action. Level up your profile and unlock exclusive badges as you grow in the metaverse.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPACES PREVIEW -->
+  <section id="spaces">
+    <div class="section-wrap" style="padding-top:0;">
+      <div class="spaces-header">
+        <div>
+          <div class="section-tag">Explore</div>
+          <h2 class="section-title">Virtual <span class="text-purple">Spaces</span></h2>
+        </div>
+        <a href="login.html" class="btn-outline">View All Spaces</a>
+      </div>
+      <div class="home-profile-card" id="homeProfileCard" hidden>
+        <div class="home-profile-avatar" id="homeProfileAvatar">✦</div>
+        <div>
+          <span>Logged in as</span>
+          <h3 id="homeProfileName">Selestia Member</h3>
+          <p id="homeProfileMeta">Your selected space will appear here.</p>
+        </div>
+        <a href="dashboard.html">View Dashboard</a>
+      </div>
+      <div class="spaces-grid">
+        <a href="gaming.html" class="space-card-preview">
+          <div class="sp-img" style="background:linear-gradient(135deg,#1a0533,#0d001a);">🎮</div>
+          <div class="sp-body">
+            <div class="sp-tag text-purple">Gaming</div>
+            <div class="sp-name">Gaming Zone</div>
+            <div class="sp-members">4,201 members</div>
+          </div>
+        </a>
+        <a href="study.html" class="space-card-preview">
+          <div class="sp-img" style="background:linear-gradient(135deg,#001a1a,#000d33);">📚</div>
+          <div class="sp-body">
+            <div class="sp-tag text-cyan">Education</div>
+            <div class="sp-name">Study Hub</div>
+            <div class="sp-members">2,847 members</div>
+          </div>
+        </a>
+        <a href="music.html" class="space-card-preview">
+          <div class="sp-img" style="background:linear-gradient(135deg,#1a001a,#0d0033);">🎵</div>
+          <div class="sp-body">
+            <div class="sp-tag text-pink">Music & Chill</div>
+            <div class="sp-name">Chill Lounge</div>
+            <div class="sp-members">3,520 members</div>
+          </div>
+        </a>
+        <a href="art.html" class="space-card-preview">
+          <div class="sp-img" style="background:linear-gradient(135deg,#2b0730,#10214a);">🎨</div>
+          <div class="sp-body">
+            <div class="sp-tag text-purple">Creative</div>
+            <div class="sp-name">Art Studio</div>
+            <div class="sp-members">1,946 members</div>
+          </div>
+        </a>
+        <a href="tech.html" class="space-card-preview">
+          <div class="sp-img" style="background:linear-gradient(135deg,#041b33,#102c22);">🛰️</div>
+          <div class="sp-body">
+            <div class="sp-tag text-cyan">Tech Lab</div>
+            <div class="sp-name">Tech Space</div>
+            <div class="sp-members">2,302 members</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="section-wrap" style="padding-top:0;">
+      <div style="text-align:center;">
+        <div class="section-tag">Simple Steps</div>
+        <h2 class="section-title">How It <span class="text-cyan">Works</span></h2>
+        <p class="section-sub" style="margin:0 auto;">Getting started in Selestia takes less than 2 minutes.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Create Account</h3>
+          <p>Sign up with your username and email. Quick, simple, and completely free.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Build Your Avatar</h3>
+          <p>Choose your avatar style, profile colour, and write a bio that defines your digital self.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Join Spaces</h3>
+          <p>Explore and join virtual spaces that match your interests and connect with your people.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>Earn XP & Level Up</h3>
+          <p>Post, like, comment, and interact to earn XP and level up your metaverse profile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-outer">
+    <div class="cta-box">
+      <div class="section-tag" style="margin-bottom:18px;">Ready to begin?</div>
+      <h2>Join the <span class="text-cyan">Selestia</span> Today</h2>
+      <p>Create your avatar, find your space, and become part of something bigger.</p>
+      <a href="login.html" class="btn-primary" style="font-size:13px;padding:15px 50px;">Create Free Account</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-logo">SELE<span>STIA</span></div>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+      <a href="#">About</a>
+    </div>
+    <div class="footer-copy">© 2025 Selestia. All rights reserved.</div>
+  </footer>
+  </div>
+
+<!-- PARTICLES -->
+<canvas id="particles"></canvas>
+
+<!-- CURSOR -->
+<div class="cursor-glow"></div>
+<div class="cursor-dot"></div>
+
+  <script src="script.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

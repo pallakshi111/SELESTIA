@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selestia — XP & Level System</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="xp.css" />
+  <link rel="stylesheet" href="theme.css?v=siteqa2" />
+</head>
+<body><div class="bg-grid"></div><div class="glow glow-one"></div><div class="glow glow-two"></div><nav class="xp-nav"><a href="index.html" class="logo">SELE<span>STIA</span></a><div class="nav-links"><a href="index.html#features">Features</a><a href="index.html#spaces">Home</a><a href="dashboard.html">Dashboard</a><a href="community.html">Community</a></div><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button></nav><main class="xp-shell"><section class="hero-panel"><div class="hero-copy"><div class="status-pill"><span></span> XP engine synced</div><h1>XP & Level System</h1><p>Every space adds to your Selestia identity. Focus, post, save music, and win games to climb levels.</p><div class="hero-actions"><a href="dashboard.html">View Dashboard</a><button id="refreshXp" type="button">Refresh XP</button></div></div><aside class="level-orbit"><div class="mini-ring"><span id="levelText">1</span></div><strong id="levelTitle">New Explorer</strong><p id="totalXpText">0 XP</p><p id="nextLevelText">100 XP to next level</p></aside></section><section class="auth-notice" id="xpAuthNotice" hidden><div><span>Profile required</span><h2>Log in to see your progress</h2><p>Your live XP unlocks after creating an avatar.</p></div><a href="login.html">Login</a></section><section class="progress-panel"><div class="panel-head"><div><span class="eyebrow">Live progress</span><h2>Total XP</h2></div></div><div class="xp-track"><span id="xpFill"></span></div><div class="breakdown-grid" id="breakdownGrid"></div></section><section class="level-grid"><article class="panel"><div class="panel-head"><div><span class="eyebrow">Ladder</span><h2>Level Ladder</h2></div></div><div id="levelLadder"></div></article><article class="panel"><div class="panel-head"><div><span class="eyebrow">Activity</span><h2>Recent XP Sources</h2></div></div><div id="activityList"></div></article></section></main>
+  <script src="xp.js"></script>
+  <script src="theme.js"></script>
+</body></html>

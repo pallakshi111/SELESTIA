@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selestia — Music Space</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="music.css?v=musicfix4" />
+  <link rel="stylesheet" href="theme.css?v=siteqa2" />
+</head>
+<body><div class="bg-grid"></div><div class="orb orb-one"></div><div class="orb orb-two"></div>
+  <nav class="music-nav space-nav">
+    <a href="index.html#spaces" class="logo">SELE<span>STIA</span></a>
+    <div class="nav-links">
+        <a href="index.html#spaces">Home</a>
+        <a href="gaming.html">Gaming</a>
+        <a href="study.html">Study</a>
+        <a href="music.html">Music</a>
+        <a href="art.html">Art</a>
+        <a href="tech.html">Tech</a>
+    </div>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><span class="theme-icon">🌙</span><span class="theme-label">Dark</span></button>
+  </nav>
+  <main class="music-shell">
+    <section class="music-hero"><div><div class="status-pill"><span></span> Music lounge online</div><h1>Music Space</h1><p>Create playlists, search tracks, play built-in audio previews, and chat with the room.</p><div class="now-card"><span>Now featured</span><strong id="heroTrack">Neon Orbit</strong><p id="heroArtist">Selestia Radio</p></div></div></section>
+    <section class="music-layout"><section class="library-panel panel"><div class="panel-head"><div><span class="eyebrow">Library</span><h2>Track Library</h2></div></div><input id="searchInput" type="search" placeholder="Search songs..." /><div class="genre-row"><button class="genre active" data-genre="all" type="button">All</button><button class="genre" data-genre="Synthwave" type="button">Synthwave</button><button class="genre" data-genre="Pop" type="button">Pop</button><button class="genre" data-genre="Indian" type="button">Indian</button><button class="genre" data-genre="Lo-fi" type="button">Lo-fi</button><button class="genre" data-genre="Rap" type="button">Rap</button></div><div class="songs-grid" id="songsGrid"></div><article class="panel playlist-panel"><div class="panel-head"><div><span class="eyebrow">Playlist</span><h2>Your queue</h2></div><button id="clearPlaylist" type="button">Clear</button></div><div class="playlist-form"><input id="playlistName" type="text" placeholder="New playlist name" /><button id="createPlaylist" type="button">Create</button></div><div id="playlistList"></div><div id="queueList"></div></article></section>
+      <aside class="player-panel panel"><span class="eyebrow">Audio</span><h2>Preview Player</h2><div class="cover-orb" id="coverOrb">🎵</div><h3 id="currentSong">No song playing</h3><p id="currentArtist">Pick any track from the library.</p><div class="progress-meta"><span id="currentTime">0:00</span><span id="durationTime">0:20</span></div><div class="timer-progress"><span id="progressFill"></span></div><div class="player-actions"><button id="prevButton" type="button">⏮</button><button id="playButton" type="button">▶</button><button id="nextButton" type="button">⏭</button></div><span class="live-badge" id="playerState">Idle</span><label class="volume-label">Volume<input id="volumeControl" type="range" min="0" max="100" value="70" /></label><article class="music-chat"><div class="panel-head"><div><span class="eyebrow">Room chat</span><h2>Music Chat</h2></div><button id="clearChat" type="button">Clear</button></div><div class="chat-feed" id="chatFeed"></div><div class="chat-compose"><input id="chatName" type="text" placeholder="Name" /><input id="chatInput" type="text" placeholder="Type a message..." /><button id="sendChat" type="button">Send</button></div></article></aside>
+    </section>
+  </main>
+  <script src="space-guard.js?v=spaceguard1"></script>
+  <script src="music.js"></script>
+  <script src="theme.js"></script>
+</body></html>
